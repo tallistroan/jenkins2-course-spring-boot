@@ -68,7 +68,7 @@ public class SampleAtmosphereApplicationTests {
 		context.close();
 		assertThat(count).isEqualTo(0L);
 		assertThat(messagePayloadReference.get())
-				.contains("{\"message\"=\"test\",\"author\":\"test\",\"time\":");
+				.contains("{\"message\":\"test\",\"author\":\"test\",\"time\":");
 	}
 
 	@Configuration
@@ -113,7 +113,7 @@ public class SampleAtmosphereApplicationTests {
 				public void afterConnectionEstablished(WebSocketSession session)
 						throws Exception {
 					session.sendMessage(new TextMessage(
-							"{\"author\"=\"test\",\"message\":\"test\"}"));
+							"{\"author\":\"test\",\"message\":\"test\"}"));
 				}
 
 				@Override
